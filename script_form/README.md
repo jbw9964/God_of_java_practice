@@ -31,7 +31,7 @@ scripts
 
 --- 
 
-## `chatper` directory
+## 1. `chatper` directory
 
 각 챕터별 폴더는 다음과 같이 구성되어 있습니다.
 
@@ -64,7 +64,9 @@ scripts/ch_01
 
 이는 `section_**.md` 또한 마찬가지 입니다.
 
-### 1. 챕터에 관한 포괄적을 내용을 담은 `README.md` 파일
+---
+
+### A. 챕터에 관한 포괄적을 내용을 담은 `README.md` 파일
 
 `README.md` 파일은 해당 챕터를 `공부하기 전`, `공부한 후` 에 작성합니다. 
 `공부하기 전` 에는 챕터에 어떤 `section` 들이 있는지 확인하기 위함이고, `공부한 후` 에는 공부한 전체적인 내용을 기록하기 위함입니다.
@@ -104,7 +106,9 @@ scripts/ch_01
 
 양식은 [`link`](./ch___README_sample.md) 를 눌러 직접 확인하실 수 있습니다. 
 
-### 2. 각 `section` 에서 배운 내용을 적을 `section_**.md` 파일
+---
+
+### B. 각 `section` 에서 배운 내용을 적을 `section_**.md` 파일
 
 `section_**.md` 파일은 여러개 일 수 있습니다. 각 챕터별로 순서를 매겨 각자 저장합니다. 만약 챕터에 `section` 이 5 개라면 `section_01.md` ~ `section_05.md` 파일이 존재할 수 있습니다.
 
@@ -137,7 +141,7 @@ scripts/ch_01
 
 ---
 
-## `code` directory
+## 2. `code` directory
 
 각 챕터 폴더에 속한 `code` 폴더에 대한 설명입니다.
 
@@ -169,7 +173,7 @@ scripts/ch_01/code
 
 ---
 
-## `extra` directory
+## 3. `extra` directory
 
 각 챕터 폴더에 속한 `extra` 폴더에 대한 설명입니다.
 
