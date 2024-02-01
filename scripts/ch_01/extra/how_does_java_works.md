@@ -28,7 +28,7 @@
 
 우리가 작성한 소스코드 `(.java)` 를 실행하기 위해선 먼저 코드를 `class file` `(.class)` 로 변환해야 한다.
 
-이 때 `class file` 이란 `Java Bytecode` 를 포함하는 파일로서, 바이트 코드 외 `"추가적인 정보"` 가 포함된 이진 파일 `(binary file)` 이다. `[3]`
+이 때 `class file` 이란 `Java Bytecode` 를 포함하는 파일로서, 바이트 코드 외 `"추가적인 정보"` 가 포함된 이진 파일 `(binary file)` 이다. [`[3]`](#is-class-file-byte-code-or-does-class-file-include-bytecode---stackoverflow)
 - 여기서 추가적인 정보란 코드 내 생성한 `class` 에 대한 메타데이터, 정보 등을 말한다.
 - 클래스의 이름, 메서드, 구현된 인터페이스, 상수 풀 등이 포함되어 있다.
 - 이진 파일이기에 그대로 볼 수 없지만 아래 명령어를 이용해 직접 볼 수 있다.
