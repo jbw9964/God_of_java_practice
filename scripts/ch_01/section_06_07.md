@@ -47,4 +47,4 @@
     - `[5]` : Forward compatibility or upward compatibility is a design characteristic that allows a system to accept input intended for a later version of itself.
 
 - ##### [`Identifiers (The Java EE 6 tutorial)`](https://docs.oracle.com/cd/E19798-01/821-1841/bnbuk/index.html)
-- `[6]` : The first character must be a valid first character (letter, `$`, _) ... Each subsequent character in the sequence must be a valid nonfirst character (letter, digit, `$`, _) in a Java identifier.
+    - `[6]` : The first character must be a valid first character (letter, `$`, _) ... Each subsequent character in the sequence must be a valid nonfirst character (letter, digit, `$`, _) in a Java identifier.

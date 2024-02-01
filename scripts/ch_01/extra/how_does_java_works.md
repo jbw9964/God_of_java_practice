@@ -12,7 +12,7 @@
 </p>
 
 먼저 `JVM` 에 대한 설명이 필요할 듯 하다.
-`JVM` 은 `Java Virtual Machine` 의 준말로, 하드웨어 플랫폼에 관계없이 `Java Bytecode` 를 실행할 수 있게 해주는 가상머신이다. `[1]` `JVM` 의 간략한 구조는 다음 그림과 같다. [`[2]`](#java-virtual-machine---wikipedia)
+`JVM` 은 `Java Virtual Machine` 의 준말로, 하드웨어 플랫폼에 관계없이 `Java Bytecode` 를 실행할 수 있게 해주는 가상머신이다. [`[1]`](#java-virtual-machine---wikipedia) `JVM` 의 간략한 구조는 다음 그림과 같다. [`[2]`](#java-virtual-machine---wikipedia)
 
 <p align="center">
     <img src="../../../images/ch01/how_does_java_works//JVM_architecture_overview.png" width=70% height=70%>
