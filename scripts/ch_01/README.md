@@ -7,6 +7,7 @@
 ### Extra
 
 - [`Java 가 실행되는 과정`](./extra/how_does_java_works.md)
+- [`Code Runner Extension 으로 Java 실행시 문제점`](./extra/java_code_runner_extension_error.md)
 
 ### What I learned from this chapter
 
