@@ -42,7 +42,7 @@ class test2  {}             // compiler 가 constructor test2::test2() 를 암�
 
 `Oracle Docs` 를 좀 뒤져봤는데 `default constructor` 의 정확한 정의는 나오지 않았다. 다만 `"이런 상황에서는 이런 default constructor 가 선언된다"` 라는 식의 예시, 또는 수식 구문만 찾을 수 있었다.
 
-그래서 ~~신빙성이 좀 떨어질 수 있지만~~ `Oracle Docs` 외 추가 검색을 하였고, 다음과 같은 `답변` 을 얻었다.
+그래서 ~~신빙성이 좀 떨어질 수 있지만~~ `Oracle Docs` 외 추가 검색을 하였고, 다음과 같은 `답변` 을 찾았다.
 
 - `"Java 에서 default constructor 는 매개변수가 없고, comipler 에 의해 자동으로만 생성되는 생성자이다."` [`[3]`](#java-default-constructor---stackoverflow)
 
