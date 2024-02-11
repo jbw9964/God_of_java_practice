@@ -138,5 +138,5 @@ class SupClass_2 extends SubClass {
 - ##### [`8.8.9. Default Constructor - Oracle Docs`](https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.8.9)
     - `[2]` : If a class contains no constructor declarations, then a default constructor is implicitly declared.
 
-- ##### [`Java default constructor - StackOverflow`](https://stackoverflow.com/questions/29664783/default-constructor-java-vs-c)
+- ##### [`Java default constructor - StackOverflow`](https://stackoverflow.com/questions/4488716/java-default-constructor)
     - `[3]` : The default constructor is the no-argument constructor automatically generated unless you define another constructor.
