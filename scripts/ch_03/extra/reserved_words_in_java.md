@@ -41,22 +41,22 @@
 - 참 또는 거짓 `(true or false)` 두 가지를 나타내는 불리안 변수 또는 메서드를 정의할 때 사용된다.
 
 ###### `byte` : `1 byte`
-- `byte` 키워드는 [`2 의 보수 방식`](#2--twos-complement---wikipedia) 으로 정의되는 `8-bit` 크기의 정수 `bitfield` 를 선언할 때 사용되는 키워드이다.
+- `byte` 키워드는 `2 의 보수 방식` [`[3]`](#3--twos-complement---wikipedia) 으로 정의되는 `8-bit` 크기의 정수 `bitfield` 를 선언할 때 사용되는 키워드이다.
 
 ###### `char` : `2 byte`
 - `16-bit` 유니코드 문자를 선언할 때 쓰이는 키워드이다. `C/C++` 과 다르게 `char` 변수는 `2 byte` 를 차지한다.
 
 ###### `int` : `4 byte`
-- `int` 키워드는 `2 의 보수 방식` [`[3]`](#2--twos-complement---wikipedia) 을 사용한 `32-bit` 크기의 부호있는 정수를 선언할 때 사용된다.
+- `int` 키워드는 `2 의 보수 방식` [`[3]`](#3--twos-complement---wikipedia) 을 사용한 `32-bit` 크기의 부호있는 정수를 선언할 때 사용된다.
 
 ###### `short` : `2 byte`
-- `short` 키워드는 `2 의 보수 방식` [`[3]`](#2--twos-complement---wikipedia) 을 사용한 `16-bit` 크기의 부호있는 정수를 선언할 때 사용된다. `"int 의 1/ 2 배"` 라고 생각하면 쉽다. 
+- `short` 키워드는 `2 의 보수 방식` [`[3]`](#3--twos-complement---wikipedia) 을 사용한 `16-bit` 크기의 부호있는 정수를 선언할 때 사용된다. `"int 의 1/ 2 배"` 라고 생각하면 쉽다. 
 
 ###### `long` : `8 byte`
-- `long` 키워드는 `2 의 보수 방식` [`[3]`](#2--twos-complement---wikipedia) 을 사용한 `64-bit` 크기의 부호있는 정수를 선언할 때 사용된다. `"int 의 2 배"` 라고 생각하면 쉽다. 
+- `long` 키워드는 `2 의 보수 방식` [`[3]`](#3--twos-complement---wikipedia) 을 사용한 `64-bit` 크기의 부호있는 정수를 선언할 때 사용된다. `"int 의 2 배"` 라고 생각하면 쉽다. 
 
 ###### `float`, `double` : `4 byte`, `8 byte`
-- 두 키워드는 `IEEE 754 부동소수 표기법` [`[4]`](#3--ieee-754---wikipedia) 을 이용한 부동소수점 변수를 선언할 때 사용되는 키워드이다. 두 키워드는 메서드의 반환 타입으로도 사용할 수 있다.
+- 두 키워드는 `IEEE 754 부동소수 표기법` [`[4]`](#4--ieee-754---wikipedia) 을 이용한 부동소수점 변수를 선언할 때 사용되는 키워드이다. 두 키워드는 메서드의 반환 타입으로도 사용할 수 있다.
 
 
 ###### `enum`
@@ -72,21 +72,21 @@
 - `if`, `else` 키워드를 이용해 `if 구문` 과 `else if`, `else 구문` 을 생성할 수 있다.
 
 ###### `for`, `do`, `while`
-- 해당 키워드를 이용해 `반복문` 을 만들 수 있다. `do` 키워드는 `C/C++` 의 것과 동일하다. 이들을 이용해 `for 반복문`, `do-while 반복문` [`[5]`](#4--do-while-loop---wikipedia) 등을 만들 수 있다.
+- 해당 키워드를 이용해 `반복문` 을 만들 수 있다. `do` 키워드는 `C/C++` 의 것과 동일하다. 이들을 이용해 `for 반복문`, `do-while 반복문` [`[5]`](#5--do-while-loop---wikipedia) 등을 만들 수 있다.
 - 반복문의 작동 방식(?) 은 `C/C++` 과 동일하다. `(1. 변수 초기화, 2. 조건 검사, 3. 반복문 수행 및 increment, 4. [3] 부터 다시 수행)`
-- `J2SE 5.0` 에서는 `for` 키워드를 이용해 `enhanced for loop` [`[6]`](#5--foreach-loop---wikipedia) 가 가능해졌다. 쉽게 말해 `Python` 마냥 `iterable` 한 객체 내 값을 순차적으로 꺼낼수 있게 되었다. 
+- `J2SE 5.0` 에서는 `for` 키워드를 이용해 `enhanced for loop` [`[6]`](#6--foreach-loop---wikipedia) 가 가능해졌다. 쉽게 말해 `Python` 마냥 `iterable` 한 객체 내 값을 순차적으로 꺼낼수 있게 되었다. 
 
 ###### `continue`, `break`
 - 해당 키워드를 이용해 `반복문` 의 반복을 제어할 수 있다. `continue` 키워드는 반복문의 조건 검사 단계로 `"돌아가고"`, `break` 는 반복문을 중단한다.
-- `break` 키워드는 `switch 구문` 에서도 사용된다. [`[7]`](#6--switch-statement---wikipedia)
+- `break` 키워드는 `switch 구문` 에서도 사용된다. [`[7]`](#7--switch-statement---wikipedia)
 
 ###### `switch`, `case`, `default`
-- 해당 키워드를 이용해 `switch 구문` [`[7]`](#6--switch-statement---wikipedia) 을 생성할 수 있다. 
+- 해당 키워드를 이용해 `switch 구문` [`[7]`](#7--switch-statement---wikipedia) 을 생성할 수 있다. 
 - `Java` 의 `switch 구문` 에는 `정수형`, `열거형`, `String` 이 사용될 수 있다. [`[8]`](#the-switch-statement---the-java™-tutorials) `(Java 7 부터 String 을 사용할 수 있다)`
 - 또한 `default` 키워드는 `interface` 의 `default method` 를 선언할 때도 이용된다. `(java 8 이상)` [`[2]`](#list-of-java-keywords---wikipedia)
 
 ###### `try`, `catch`, `finally`
-- 해당 키워드를 이용해 프로그램 내 `예외 처리` [`(Exception handling), [11]`](#8--exception-handling-programming---wikipedia) 를 진행할 수 있다.
+- 해당 키워드를 이용해 프로그램 내 `예외 처리` [`(Exception handling), [11]`](#11--exception-handling-programming---wikipedia) 를 진행할 수 있다.
 - 키워드 사용 방식은 `Python` 의 `try`, `except`, `finally` 와 동일하다.
 
 ###### `return`
@@ -95,7 +95,7 @@
 ###### `synchronized`
 - `synchronized` 키워드는 2 개 이상의 스레드를 통해 코드가 실행되고 있을 때, 스레드 간 `"동기화"` 를 위한 키워드이다.
 - `synchronized` 키워드를 이용하면 다른 스레드가 종료될 때까지 기다리고, 해당 메서드 또는 블럭만을 실행한다. 즉, `synchronized` 키워드가 존재하는 부분은 1 개의 스레드만 실행된다.
-- 해당 메서드 또는 블럭의 실행이 종료되었으면 `"스레드 락"` [`(mutex lock), [12]`](#9--lock-computer-science---wikipedia) 은 해제된다.
+- 해당 메서드 또는 블럭의 실행이 종료되었으면 `"스레드 락"` [`(mutex lock), [12]`](#12--lock-computer-science---wikipedia) 은 해제된다.
 
 
 ---
@@ -245,7 +245,7 @@ SubClass example = new SuperClass();
 - `final` 키워드를 이용해 변수를 선언할 시, 해당 변수는 `"좌변"` `(Left-value, Left-hand expression)` 에 단 한번만 존재할 수 있다. 이 때문에 `Java` 에서 `final` 변수를 상수처럼 이용할 수 있다. `(Java 에는 const "키워드" 는 없음)` `(const 예약어는 있음)`
 
 ###### `static`
-- `static` 키워드를 이용해 `클래스의 필드`, 메서드, `내부 클래스` 등을 선언할 수 있다. `C/C++` 에서의 `static` 과 살짝 다르다. [`[23]`](#static)
+- `static` 키워드를 이용해 `클래스의 필드`, 메서드, `내부 클래스` 등을 선언할 수 있다. `C/C++` 에서의 `static` 과 살짝 다르다. [`[23]`](#static-1)
 - `static` 키워드를 정확히 설명하기에는 현재 지식이 부족한 것 같아, 기회가 되면 나중에 기록하기로 한다.
 - `Wikipedia 원문` [`[25]`](#list-of-java-keywords---wikipedia)
     - Used to declare a field, method, or inner class as a class field. Classes maintain one copy of class fields regardless of how many instances exist of that class. static also is used to define a method as a class method. Class methods are bound to the class instead of to a specific instance, and can only operate on class fields. Classes and interfaces declared as static members of another class or interface are actually top-level classes and are not inner classes.
