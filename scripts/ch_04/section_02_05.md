@@ -80,7 +80,7 @@ public void some_method()
 
 ---
 
-덧붙여 `C` 에서 `"아주 큰 수"` 를 계산하기 위해 `GMP` `(The GNU Multiple Precision Arthimetic Library)` 같은 라이브러리를 이용한다.
+덧붙여 `C` 에서는 `"아주 큰 수"` 를 계산하기 위해 `GMP` `(The GNU Multiple Precision Arthimetic Library)` 같은 라이브러리를 이용한다.
 
 `Java` 에도 이런게 존재한다. `BigDecimal` [`[7]`](#big-numbers) 은 `GMP` 와 동일하게 `임의 정밀도` `(arbitrary precision)` [`[8]`](#big-numbers) 를 이용한다. 때문에 메모리가 남아도는 한, `int` 와 같은 `numeric value` 에 대한 연산은 무한정 `"늘릴"` 수 있다.
 
