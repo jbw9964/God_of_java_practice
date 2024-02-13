@@ -2,22 +2,31 @@ package scripts.ch_05.code;
 
 interface Required_methods {
     double getMonthlySalary(int yearlySalary);
+
     double calculateTax(double monthSalary);
     double calculateNationalPension(double monthSalary);
+    double calculateHealthInsurance(double monthSalary);
 }
 
 public class SalaryManager implements Required_methods {
     public static void main(String[] args) {
         SalaryManager test = new SalaryManager();
 
-        System.out.println(test.calculateNationalPension(300));
+        double monthSalary = test.getMonthlySalary(2000);
+        System.out.println(monthSalary * 12);
+    }
+
+    public double payoff_total(double monthSalary)
+    {
+        return calculateTax(monthSalary) + calculateNationalPension(monthSalary) + calculateHealthInsurance(monthSalary);
     }
 
     @Override
     public double getMonthlySalary(int yearlySalary)
     {
-        double month_salary = yearlySalary / 12.d;
-        return month_salary - calculateTax(month_salary);
+        double monthSalary = yearlySalary / 12.d;
+        monthSalary -= payoff_total(monthSalary);
+        return monthSalary;
     }
     public double calculateTax(double monthSalary)
     {
@@ -25,7 +34,10 @@ public class SalaryManager implements Required_methods {
     }
     public double calculateNationalPension(double monthSalary)
     {
-        monthSalary -= calculateTax(monthSalary);
-        return 12 * monthSalary;
+        return monthSalary * (0.081d);
+    }
+    public double calculateHealthInsurance(double monthSalary)
+    {
+        return monthSalary * (0.135d);
     }
 }

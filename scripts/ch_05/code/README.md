@@ -15,3 +15,9 @@
 
 - `[4]` : `[3]` 에서 만든 `calculateTax()` 메서드를 `getmonthlySalary()` 메서드에서 호출하여 세금을 얼마나 공제해야 하는지 얻어 내도록 하자.
 - `[5]` : `[3]` 에서 명시한 연금을 계산하는 `public double calculateNationalPension(double monthSalary)` 메서드를 만들자. 매개 변수는 월 급여이며, 리턴 값은 공제해야 하는 금액이다. 이 때 계산된 금액을 화면에 출력하도록 하자.
+- `[6]` : `[4]` 에서처럼 `getMonthlySalary()` 메서드에서 `calculateNationalPension()` 메서드를 호출하여 연금을 얼마나 공제해야 하는지 얻어 내도록 하자.
+- `[7]` : 마찬가지로 건강보험료를 계산하는 `public double calculateHealthInsurance(double monthSalary)` 라는 메서드를 만들어 공제해야 하는 건강보험료를 계산하여 리턴하자.
+- `[8]` : `[4]` 에서처럼 `getMonthlySalary()` 메서드에서 `calculateHealthInsurace()` 메서드를 호출하여 건강 보험료를 얼마나 공제해야 하는지 얻어 내도록 하자.
+- `[9]` : `getMonthlySalary()` 메서드를 `[4]`, `[6]`, `[8]` 에서 계산된 값을 전부 합치자.
+- `[10]` : `-=` 연산자를 이용해 전체 월 급여에서 `[9]` 에서 계산된 값을 빼자.
+- `[11]` : 이제 `main()` 메서드에서 `getMonthlySalary()` 메서드를 호출할 수 있도록, `SalaryManager` 클래스의 객체를 생성한 후, 연봉이 `2,000` 만원인 사람의 연봉을 계산하도록 하자.
