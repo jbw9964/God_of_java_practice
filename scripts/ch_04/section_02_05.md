@@ -63,7 +63,7 @@ void some_method()
 
 모두 직관적으로 `"0"` 으로 초기화 된다. `(compiler 가 해준다)`
 
-\+ 필드 변수 (인스턴스 변수, 클래스 변수 등) 과 달리, 지역변수는 **절대로** `compiler` 가 자동으로 초기화 해주지 않는다. 애초에 지역변수는 초기화 되지 않으면 `(garbage value 는 고사하고)` 컴파일 에러를 뱉어낸다. [`[6]`](#5--primitive-data-types-default-values---the-java™-tutorials)
+\+ 필드 변수 (인스턴스 변수, 클래스 변수 등) 과 달리, 지역변수는 **절대로** `compiler` 가 자동으로 초기화 해주지 않는다. 애초에 지역변수는 초기화 되지 않으면 `(garbage value 는 고사하고)` 컴파일 에러를 뱉어낸다. [`[6]`](#6--why-does-the-java-char-primitive-take-up-2-bytes-of-memory)
 
 또한 다음과 같은 코드는 컴파일 에러를 일으킨다. 유의하자.
 ```java
