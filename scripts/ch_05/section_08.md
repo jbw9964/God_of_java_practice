@@ -33,3 +33,5 @@ void some_method()
 ---
 
 덧붙여 `Java` 에는 `>>>` 비트 연산자가 존재한다. 이는 동일하게 `rshift` 연산을 진행하지만, `MSB` `(Most Significant Bit)` 를 `0` 으로 채우면서 `shift` 를 진행한다.
+
+`(그냥 rshift 연산을 진행하면 MSB 의 부호에 맞춰 shift 가 진행된다)`
