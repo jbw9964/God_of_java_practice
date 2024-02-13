@@ -72,46 +72,46 @@ class sample {
 
 ```java
 // sample.java
-class SubClass {
+class SupClass {
     int x, y;
-    SubClass() {        // default constructor 가 아님.
+    SupClass() {        // default constructor 가 아님.
         this.x = 10;    
         this.y = 20;
     }
 }
 
-class SupClass_1 extends SubClass {
-    SupClass_1() {}     // 하지만 애는 default constructor 와 동일
+class SubClass_1 extends SupClass {
+    SubClass_1() {}     // 하지만 애는 default constructor 와 동일
 }
 
-class SupClass_2 extends SubClass {
-    SupClass_2() {      // 하지만 애는 default constructor 와 동일
+class SubClass_2 extends SupClass {
+    SubClass_2() {      // 하지만 애는 default constructor 와 동일
         super();
     }
 }
 ```
 
-`SupClass_1` 의 경우 상속 관계가 있지만 이전 예시와 동일하다.
-`SupClass_2` 의 경우 `super()` 가 사용되었다. 하지만 `super() 는 결국 부모 클래스 의 생성자를 호출하는 것 뿐이기 때문에`, 이 또한 결국 `SupClass_1` 과 동일하다. 즉, 둘 다 `default constructor` 라는 것이다.
+`SubClass_1` 의 경우 상속 관계가 있지만 이전 예시와 동일하다.
+`SubClass_2` 의 경우 `super()` 가 사용되었다. 하지만 `super() 는 결국 부모 클래스 의 생성자를 호출하는 것 뿐이기 때문에`, 이 또한 결국 `SubClass_1` 과 동일하다. 즉, 둘 다 `default constructor` 라는 것이다.
 
 이는 다음 명령어를 통해 직접 확인해 볼 수 있다.
 
 ```bash
-$ javac sample.java && javap SupClass_1.class && javap SupClass_2.class
+$ javac sample.java && javap SubClass_1.class && javap SubClass_2.class
 ```
 ```java
 // Compiled from "sample.java"
-class SupClass_1 extends SubClass {
-  SupClass_1();
+class SubClass_1 extends SupClass {
+  SubClass_1();
 }
 ```
 ```java
 // Compiled from "sample.java"
-class SupClass_2 extends SubClass {
-  SupClass_2();
+class SubClass_2 extends SupClass {
+  SubClass_2();
 }
 ```
-`(SupClass_1 의 생성자와 SupClass_2 의 생성자가 결국 동일한 것을 확인할 수 있다)`
+`(SubClass_1 의 생성자와 SubClass_2 의 생성자가 결국 동일한 것을 확인할 수 있다)`
 
 ---
 
@@ -120,7 +120,7 @@ class SupClass_2 extends SubClass {
 사실 위 `javap` 명령어를 이용해 `disassemble` 한 것은 엄밀히 말해 `"소스코드 내용을 정확히 확인한 것"` 은 아니다. 아예 `compiler` 에 의한 `source-code level` 까지 확인하려면, `JD-Core`, `CFT decompiler` 등의 `java decompiler` 를 이용해 확인해야 한다.
 
 나의 경우 `VSCode` 의 `extension` 을 이용해 `decompile` 할 수 있었는데, 이게 정확히 어떤 프로그램을 이용한건지 확인하기 어러워 글에 적진 않았다.
-하지만 확인해 보니 `SupClass_1`, `SupClass_2` 의 생성자가 동일한 것은 맞았고, 무엇보다 생성자를 선언하지 않아도 `compiler` 가 `default constructor` 를 만드는 것은 확인할 수 있었다.
+하지만 확인해 보니 `SubClass_1`, `SubClass_2` 의 생성자가 동일한 것은 맞았고, 무엇보다 생성자를 선언하지 않아도 `compiler` 가 `default constructor` 를 만드는 것은 확인할 수 있었다.
 
 결국 `C++` 과 `Java` 에서 말하는 `default constructor` 가 사뭇 다른 의미를 가지고 있는 것을 확인하였다.
 - `C++` 의 경우 `compiler` 에 의한 암묵적 변환이 일어날 수 있어, 클래스의 `consturctor` 에 대해 생각할 점이 많다.

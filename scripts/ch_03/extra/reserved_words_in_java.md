@@ -123,7 +123,7 @@
 - `public` 키워드를 이용할 시, 해당 클래스 외부에서도 접근 가능하다.
 
 ###### `abstract`
-- `abstract` 키워드는 추상 클래스를 생성할 때 사용된다. 추상 클래스는 상속될 수 없으며, 추상 클래스에 속한 메서드는 선언만 있을 뿐 정의되지 않는다. `(추상 클래스의 메서드는 sub class 에서 정의되어야 하며, 추상 클래스의 메서드는 반드시 존재햐외 되는 것은 아니다)`
+- `abstract` 키워드는 추상 클래스를 생성할 때 사용된다. 추상 클래스는 상속될 수 없으며, 추상 클래스에 속한 메서드는 선언만 있을 뿐 정의되지 않는다. `(추상 클래스의 메서드는 Sub-class 에서 정의되어야 하며, 추상 클래스의 메서드는 반드시 존재햐외 되는 것은 아니다)`
 - `abstract` 키워드는 변수 또는 생성자에 사용될 수 없다.
 
 ###### `interface`
@@ -136,13 +136,13 @@
 
 ```java
 // allowed
-class       SubClass        extends  SuperClass {...}                           // 단 하나의 "부모 클래스"
-interface   SubInterface    extends  SuperInterface_1, SuperInterface_2 {...}   // 1 개 이상의 "부모 인터페이스"
+class       SupClass        extends  SubClass {...}                         // 단 하나의 "부모 클래스"
+interface   SupInterface    extends  SubInterface_1, SubInterface_2 {...}   // 1 개 이상의 "부모 인터페이스"
 
 // not allowed
-class       SubC1   extends  SuperC1, SuperC2 {...}  // 단 하나의 클래스만 extends 가능
-class       SubC2   extends  SuperInter {...}        // "부모 클래스" 가 아님
-interface   SubI    extends  SuperC1 {...}           // "부모 인터페이스" 가 아님
+class       SupC1   extends  SubC1, SubC2 {...}     // 단 하나의 클래스만 extends 가능
+class       SupC2   extends  SubInter {...}         // "부모 클래스" 가 아님
+interface   SupI    extends  SubC1 {...}            // "부모 인터페이스" 가 아님
 ```
 
 - `implements` 키워드는 `"해당 클래스를 어느 인터페이스를 이용해 구현할지"` 명시하는 키워드이다. 이를 이용해 `"다중 상속을 구현"` [`[10]`](#multiple-inheritance-of-state-implementation-and-type---the-java™-tutorials) 할 수 있다.
@@ -150,11 +150,11 @@ interface   SubI    extends  SuperC1 {...}           // "부모 인터페이스"
 
 ```java
 // allowed
-class SubClass implements SuperInterface_1, SuperInterface_2 {...}
+class SupClass implements SubInterface_1, SubInterface_2 {...}
 
 // not allowed
-class       SubC implements SupC1 {...} // "부모 인터페이스" 만 implements 할 수 있음
-interface   SubI implements ...         // class 가 아님
+class       SupC implements SupC1 {...} // "부모 인터페이스" 만 implements 할 수 있음
+interface   SupI implements ...         // class 가 아님
 ```
 
 - 두 키워드를 정리하자면, `implements` 는 <ins>**추상 메서드의**</ins> 행동을 정의하기 위해 사용되는 키워드이고, `extends` 는 `(class 든 interface 든)` <ins>**상속하여**</ins> 행동을 정의하기 위해 사용되는 키워드이다. [`[14]`](#13--why-an-interface-can-not-implement-another-interface---stackoverflow)
@@ -191,23 +191,27 @@ class test {
 - 이를 예시로 나타내면 다음과 같다.
 
 ```java
-interface SubI                  {...}
-class SubC                      {...}
+interface SupI                  {...}
+class SupC                      {...}
 
-interface SupI extends SubI     {...}
+interface SubI extends SupI     {...}
 
-class SupC_C extends SubC       {...}
-class SupC_I implements SupI    {...}
+class SubC_C extends SupC       {...}
+class SubC_I implements SubI    {...}
 
-SupC_C class_extends_class          = new SupC_C();
-SupC_I class_implements_interface   = new SupC_I();
+SubC_C class_extends_class          = new SubC_C();
+SubC_I class_implements_interface   = new SubC_I();
 
-class_extends_class         instanceof SupC_C   // true
-class_extends_class         instanceof SubC     // true
+class_extends_class         instanceof SubC_C   // true
+class_extends_class         instanceof SupC     // true
 
-class_implements_interface  instanceof SupC_I   // true
-class_implements_interface  instanceof SupI     // true
+class_implements_interface  instanceof SubC_I   // true
 class_implements_interface  instanceof SubI     // true
+class_implements_interface  instanceof SupI     // true
+
+SupC class_super = new SupC();
+
+class_super instanceof SubC_C       // false
 ```
 
 - 덧붙여 `runtime type` 과 `complie-time type` 은 각각, `"실제 객체의 타입"` 과 `"코드에 선언되어 있는 타입"` 이다. [`[18]`](#1115-polymorphism---runestone-academy) 이는 예시를 확인하는게 훨씬 편하다.
@@ -220,7 +224,7 @@ SubClass example = new SuperClass();
 ```
 
 - 객체 `example` 의 `comiple-time type` 은 `SubClass` 이며, `runtime type` 는 `SuperClass` 이다. 
-    `(+ 위 코드는 SuperClass 와 SubClass 의 필드, 메소드 등이 정확히 일치해야 가능하다)`
+    `(+ 위 코드를 실행할 시, 참조형 간 타입 캐스팅이 일어나 SuperClass 에 속한 변수는 모두 없어진다)`
 
 ---
 
