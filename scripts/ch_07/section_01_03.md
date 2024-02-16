@@ -62,12 +62,11 @@ System.out.println(array);
 - `"toString 메서드는 객체 class 의 이름과 @, 객체에 대한 해쉬 코드로 이뤄진 문자열을 반환한다. 즉, 다음과 같은 문자열을 반환한다 : getClass().getName() + @ + Integer.toHexString(hashCode())"`
 - `Integer.toHexString(hashCode())` 는 개체의 고유한 `hashcode` 를 반환하는 것이니 큰 상관이 없다.
 - 중요한 건 `getClass().getName()` 이다. 주어진 객체의 class 이름을 붙인다는 것이다.
-- 이러한 사실을 앞선 예시에 적용하면 `[I` 는 클래스 이름, `279f2327` 는 객체의 `hashcode` 임을 알 수 있다.
 
-개인적으로 `"어떻게 [I 따위가 어떻게 클래스 이름??"` 이라는 생각이 들어 좀 더 찾아봤다. 그러다 다음과 같은 글을 발견하였다. [`[5]`](#oracle-docs)
+이 사실을 앞선 예시에 적용하면, `[I@279f2327` 의 `[I` 는 클래스 이름, `279f2327` 는 객체의 `hashcode` 임을 알 수 있다.
+
+개인적으로 `"어떻게 [I 따위가 어떻게 클래스 이름??"` 이라는 생각이 들어 좀 더 찾아봤다. 그러다 다음과 같은 글을 발견하였다. [`[5]`](#oracle-docs) 해당 설명은 `getName` 메서드에 관한 설명이다.
 - `"만약 주어진 객체가 배열 형태라면, 앞에 [ 를 붙이고 다음과 같은 notation 을 사용한다."`
-
-<center>
 
 |`Element Type`|`Encoding`|
 |:---:|:---:|
@@ -81,9 +80,7 @@ System.out.println(array);
 |`double`|`D`|
 |`class` or `interface`|`L{ClassName}`|
 
-</center>
-
-즉, <ins>**`[` 는 객체가 배열 타입**</ins>이라는 것을 지칭하고, 뒤의 <ins>**영문자는 특정 타입**</ins>의 배열이라는 것을 의미한다는 것이다.
+즉, <ins>**`[` 는 객체가 배열 타입**</ins>이라는 것을 지칭하고, <ins>**뒤의 영문자는 특정 타입**</ins>의 배열이라는 것을 의미한다는 것이다.
 
 이를 다음과 같은 코드로 직접 확인하였다.
 
