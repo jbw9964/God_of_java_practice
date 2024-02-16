@@ -33,6 +33,11 @@ System.out.println(array[0] + "\t" + array[1]);
 [I@816f27d      [I@87aac27
 ```
 
+물론 다음과 같은 방법으로 정형 배열을 선언할 수 있다.
+```java
+int[][] TwoDimArray = new int[2][2];
+```
+
 ---
 
 ### `7. 배열을 위할 for 루프`
