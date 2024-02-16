@@ -4,10 +4,14 @@
 - [`6. 한 줄을 의미하는 세미콜론`](./section_06_07.md)
 - [`7. 모든 프로그래밍 언어에는 예약어라는 것이 있어요`](./section_06_07.md)
 
+---
+
 ### Extra
 
 - [`Java 가 실행되는 과정`](./extra/how_does_java_works.md)
 - [`Code Runner Extension 으로 Java 실행시 문제점`](./extra/java_code_runner_extension_error.md)
+
+---
 
 ### What I learned from this chapter
 
