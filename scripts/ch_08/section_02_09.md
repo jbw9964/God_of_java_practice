@@ -8,7 +8,7 @@
 
 ### `2. 기본 생성자`
 
-`Java` 에서의 기본 생성자 `(default constructor)` 는 `C/C++` 의 것과 사뭇 다르다. [`(Java 와 C++ 에서의 default constructor)`](../ch_03/extra/difference_of_default_constructor_in_java_and_cpp.md)
+`Java` 에서의 기본 생성자 `(default constructor)` 는 `C/C++` 의 것과 사뭇 다르다. [`(Chapter 03 Extra - Java 와 C++ 에서의 default constructor)`](../ch_03/extra/difference_of_default_constructor_in_java_and_cpp.md)
 
 `Java` 의 기본 생성자는 클래스 내 선언된 생성자가 없을 때 만 `compiler` 가 만들어준다. 때문에 다음과 같이 코드를 만들면 에러가 발생한다.
 
@@ -35,7 +35,9 @@ Unresolved compilation problem: The constructor SomeClass() is undefined
 
 이전에 언급했듯, `Java` 에는 `C++` 과 유사하게 정적 변수 `(클래스 변수)`, 메서드가 존재한다. 클래스 변수를 초기화 하기 위해 `Java` 에는 `Static block` 을 이용한다.
 
-`Static block` 은 얼마나 많은 객체가 존재하든, 객체가 선언될 때 단 한번만 실행된다. 또한 클래스 내 다수의 `Static block` 이 존재할 수 있는데, 이는 `line` 순서대로 실행된다.
+`Static block` 은 얼마나 많은 객체가 존재하든, 객체가 선언될 때 단 한번만 실행된다. `static` 키워를 이용한 클래스 변수와 동일하게 말이다. [`(Chapter 04 - Section 1)`](../ch_04/section_01.md#1-자바에서는-네-가지의-변수가-존재해요)
+
+또한 클래스 내 다수의 `Static block` 이 존재할 수 있는데, 이는 `line` 순서대로 실행된다.
 
 다음 예시를 보자.
 
