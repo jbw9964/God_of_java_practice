@@ -224,7 +224,6 @@ SubClass example = new SuperClass();
 ```
 
 - 객체 `example` 의 `comiple-time type` 은 `SubClass` 이며, `runtime type` 는 `SuperClass` 이다. 
-    `(+ 위 코드를 실행할 시, 참조형 간 타입 캐스팅이 일어나 SuperClass 에 속한 변수는 모두 없어진다)`
 
 ---
 
