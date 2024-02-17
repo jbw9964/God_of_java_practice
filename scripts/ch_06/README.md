@@ -4,6 +4,8 @@
 - [`3. 자바의 switch 와 불켜는 스위치는 별 상관 없다`](./section_03_06.md)
 - [`6. 많이 사용 안하는 label`](./section_03_06.md)
 
+---
+
 ### What I learned from this chapter
 
 이번 챕터에서 `switch` 구문이 나왔다. 놀랍게도 `C/C++` 과 다르게 `String` 을 이용해 `switch` 구문을 사용할 수 있다 한다.

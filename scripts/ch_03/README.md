@@ -1,10 +1,14 @@
 
 ### Chapter 03 : 자바를 제대로 알려면 객체가 무엇인지 알아야 해요
 
+---
+
 ### Extra
 
 - [`Java 의 예약어 / 키워드 정리`](./extra/reserved_words_in_java.md)
 - [`Java 와 C++ 에서의 default constructor`](./extra/difference_of_default_constructor_in_java_and_cpp.md)
+
+---
 
 ### What I learned from this chapter
 
