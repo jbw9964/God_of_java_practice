@@ -10,6 +10,7 @@
     // basics for general
     "type"          : "shell",
     "options"       : {"cwd" : "${workspaceFolder}"},   // should be project's directory
+    "problemMatcher": [],
 
     // revealing options for general
     "presentation"  : {
@@ -26,11 +27,19 @@
     "tasks": [
         {
             "label"     : "Build Java",
+            "group"     : "build",
+
             "command"   : "javac",
             "args"      : [
                 "-g",
                 "${file}"
-            ]
+            ],
+
+            "detail"    : "Compile current Java file",
+            "icon"      : {
+                "id"    : "file-code",
+                "color" : "terminal.ansiBlue"
+            },
         },
 
         {
@@ -42,7 +51,35 @@
             
             "command"       : "java",
             "args"          : ["${relativeFileDirname}/${fileBasenameNoExtension}"],
-            "dependsOn"     : ["Build Java"]
+            "dependsOn"     : ["Build Java"],
+
+            "presentation"  : {"clear": true},      // clear terminal before execution
+            "detail"        : "Compile & Execute current Java file",
+            "icon"          : {
+                "id"    : "run-all",
+                "color" : "terminal.ansiGreen"
+            }
         },
+
+        {
+            "label"     : "Clean Java class files",
+            "group"     : "none",
+
+            "command"   : "find",
+            "args"      : [
+                "${workspaceFolder}",
+                "-name",
+                "\\*.class",
+                "-type",
+                "f",
+                "-delete"
+            ],
+
+            "detail"    : "Clean every Java class files in Working Directory",
+            "icon"      : {
+                "id"    : "clear-all",
+                "color" : "terminal.ansiCyan"
+            },
+        }
     ],
 }
