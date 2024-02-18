@@ -42,7 +42,7 @@
             },
         },
 
-        {
+        {   // Keyboard Shortcuts : cmd + shift + J
             "label"         : "Run Java",
             "group"         : "build",
             "options"       : {
@@ -61,7 +61,7 @@
             }
         },
 
-        {
+        {   // Keyboard Shortcuts : cmd + shift + I
             "label"     : "Clean Java class files",
             "group"     : "none",
 
