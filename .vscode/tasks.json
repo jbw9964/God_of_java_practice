@@ -12,6 +12,18 @@
     "options"       : {"cwd" : "${workspaceFolder}"},   // should be project's directory
     "problemMatcher": [],
 
+    // terminal properties for each platform
+    "windows"   : {"options": {"shell": {
+                "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "args"      : [
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-Command"
+                ]}}},
+    "linux"     : {},
+    "osx"       : {},
+
     // revealing options for general
     "presentation"  : {
         "echo"              : true,
@@ -65,6 +77,23 @@
             "label"     : "Clean Java class files",
             "group"     : "none",
 
+            // CLI for window powershell
+            "windows"   : {
+                "command"   : "Get-ChildItem",
+                "args"      : [
+                    "${workspaceFolder}",
+                    "-Recurse",
+                    "|",
+                    "Where{$_.Name",
+                    "-Match",
+                    "'class'}",
+                    "|",
+                    "Remove-Item"
+                ]
+            },
+
+            // CLI for unix shell
+            "linux" : {}, "osx" : {},
             "command"   : "find",
             "args"      : [
                 "${workspaceFolder}",
