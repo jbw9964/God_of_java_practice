@@ -8,12 +8,6 @@
 
 ---
 
-### Extra
-
-- []()
-
----
-
 ### What I learned from this chapter
 
 이번 챕터에서는 `Java` 의 `package` 에 관해 배웠다.
