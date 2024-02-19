@@ -6,6 +6,7 @@
 - [`10. Pass by value, Pass by reference`](./section_10_11.md)
 - [`11. 매개 변수를 지정하는 특이한 방법`](./section_10_11.md)
 
+---
 
 ### What I learned from this chapter
 
