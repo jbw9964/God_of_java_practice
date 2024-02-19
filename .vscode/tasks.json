@@ -36,7 +36,7 @@
     },
     "promptOnClose" : false,
 
-    "tasks": [
+    "tasks" : [
         {
             "label"     : "Build Java",
             "group"     : "build",
@@ -55,11 +55,11 @@
         },
 
         {   // Keyboard Shortcuts : cmd + shift + J
-            "label"         : "Run Java",
-            "group"         : "build",
+            "label"     : "Run Java",
+            "group"     : "build",
             
-            "command"       : "java",
-            "dependsOn"     : ["Build Java"],
+            "command"   : "java",
+            "dependsOn" : ["Build Java"],
 
             // CLI for window powershell    |   in window, `\` is used as separator, causing `java.lang.NoClassDefFoundError`
             "windows"   : {
