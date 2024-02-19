@@ -1,0 +1,128 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    // List of variables in VsCode : 
+    // https://code.visualstudio.com/docs/editor/variables-reference
+
+    "version"       : "2.0.0",
+
+    // basics for general
+    "type"          : "shell",
+    "options"       : {"cwd" : "${workspaceFolder}"},   // should be project's directory
+    "problemMatcher": [],
+
+    // terminal properties for each platform
+    "windows"   : {"options": {"shell": {
+                "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",     // absolute path to Powershell
+                "args"      : [
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-Command"
+                ]}}},
+    "linux"     : {},
+    "osx"       : {},
+
+    // revealing options for general
+    "presentation"  : {
+        "echo"              : true,
+        "reveal"            : "always",
+        "focus"             : true,
+        "panel"             : "shared",
+        "showReuseMessage"  : true,
+        "clear"             : false,
+        "revealProblems"    : "onProblem"
+    },
+    "promptOnClose" : false,
+
+    "tasks" : [
+        {
+            "label"     : "Build Java",
+            "group"     : "build",
+
+            "command"   : "javac",
+            "args"  : [
+                "-g",
+                "${file}"
+            ],
+
+            "detail"    : "Compile current Java file",
+            "icon"  : {
+                "id"    : "file-code",
+                "color" : "terminal.ansiBlue"
+            },
+        },
+
+        {   // Keyboard Shortcuts : cmd + shift + J
+            "label"     : "Run Java",
+            "group"     : "build",
+            
+            "command"   : "java",
+            "dependsOn" : ["Build Java"],
+
+            // CLI for window powershell    |   in window, `\` is used as separator, causing `java.lang.NoClassDefFoundError`
+            "windows"   : {
+                "command"   : "${workspaceFolder}${/}.vscode${/}ChangeSeparator.bat",      // use `ChangeSeparator.bat` to convert separator like unix
+                "args"  : [
+                    "${relativeFileDirname}/${fileBasenameNoExtension}",
+                    "|",
+                    "ForEach-Object",
+                    "{",
+                    "java",
+                    "$_",
+                    "}"
+                ],
+            },
+
+            // CLI for unix shell           |   in unix, `/` is used as separator
+            "linux" : {}, "osx" : {},
+            "args"  : ["${relativeFileDirname}/${fileBasenameNoExtension}"],
+
+            "presentation"  : {"clear": true},      // clear terminal before execution
+            "detail"        : "Compile & Execute current Java file",
+            "icon"  : {
+                "id"    : "run-all",
+                "color" : "terminal.ansiGreen"
+            }
+        },
+
+        {   // Keyboard Shortcuts : cmd + shift + I
+            "label"     : "Clean Java class files",
+            "group"     : "none",
+
+            // CLI for window powershell
+            "windows"   : {
+                "command"   : "Get-ChildItem",
+                "args"  : [
+                    "${workspaceFolder}",
+                    "-Recurse",
+                    "|",
+                    "Where{$_.Name",
+                    "-Match",
+                    "'class'}",
+                    "|",
+                    "Remove-Item"
+                ]
+            },
+
+            // CLI for unix shell
+            "linux" : {}, "osx" : {},
+            "command"   : "find",
+            "args"  : [
+                "${workspaceFolder}",
+                "-name",
+                "\\*.class",
+                "-type",
+                "f",
+                "-delete"
+            ],
+
+            "detail"    : "Clean every Java class files in Working Directory",
+            "icon"  : {
+                "id"    : "clear-all",
+                "color" : "terminal.ansiCyan"
+            },
+        }
+    ],
+}

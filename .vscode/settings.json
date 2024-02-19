@@ -1,0 +1,18 @@
+{
+    "workspaceKeybindings.CustomTasks.enabled": true
+}
+// User >> keybindings.json
+// [
+//     {
+//         "key"       : "ctrl+shift+j",
+//         "command"   : "workbench.action.tasks.runTask",
+//         "when"      : "config.workspaceKeybindings.CustomTasks.enabled",
+//         "args"      : "Run Java"
+//     },
+//     {
+//         "key"       : "ctrl+shift+i",
+//         "command"   : "workbench.action.tasks.runTask",
+//         "when"      : "config.workspaceKeybindings.CustomTasks.enabled",
+//         "args"      : "Clean Java class files"
+//     }
+// ]
