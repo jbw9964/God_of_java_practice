@@ -79,7 +79,7 @@
             "linux" : {}, "osx" : {},
             "args"  : ["${relativeFileDirname}/${fileBasenameNoExtension}"],
 
-            "presentation"  : {"clear": false},      // clear terminal before execution
+            "presentation"  : {"clear": true},      // clear terminal before execution
             "detail"        : "Compile & Execute current Java file",
             "icon"  : {
                 "id"    : "run-all",
