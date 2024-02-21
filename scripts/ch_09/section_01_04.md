@@ -18,10 +18,8 @@
 `package` 를 이용할 때는 다음과 같은 규칙을 따라야 한다.
 - 1. `package` 선언은 소스의 가장 첫 줄에 있어야만 한다.
 - 2. `package` 선언은 소스에 단 하나만 존재할 수 있다.
-- 3. `package` 이름과 현재 소스가 위치한 폴더 이름이 같아야 한다.
-    - 이를 어길 경우 `java.lang.NoClassDefFoundError` 와 같은 에러가 나올 수 있다.
-- 4. `package` 이름은 `java` 로 시작해선 안된다. `(Java 는 된다)`
-    - 이를 어길 경우 `java.lang.SecuritySeception` 이 발생한다.
+- 3. `package` 이름과 현재 소스가 위치한 폴더 이름이 같아야 한다. 이를 어길 경우 `java.lang.NoClassDefFoundError` 와 같은 에러가 나올 수 있다.
+- 4. `package` 이름은 `java` 로 시작해선 안된다. `(Java 는 된다)` 이를 어길 경우 `java.lang.SecuritySeception` 이 발생한다.
 
 ---
 
