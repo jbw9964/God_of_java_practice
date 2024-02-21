@@ -25,7 +25,7 @@ class SubClass extends SupClass {
 ```
 
 위 예시의 `SupClass` 는 여러 생성자를 정의했으므로, 기본 생성자가 만들어지지 않는다. 
-때문에 아래처럼 생성자를 선언할 경우, 참조할 기본 생성자 `(super())` 가 `SupClass` 에 존재하지 않기 때문에 에러를 뱉어낸다.
+때문에 아래처럼 생성자를 선언할 경우, 참조할 기본 생성자 `(SuperClass())` 가 `SupClass` 에 존재하지 않기 때문에 에러를 뱉어낸다.
 
 ```java
 public SubClass()   {}  // compile error : no suitable constructor found for SupClass(no arguments)
@@ -67,7 +67,7 @@ class SubClass extends SupClass {
 
 위의 예시가 잘 돌아가는 이유는 `"String 타입이 Object 보다 더 구체적이기 때문"` 이다. 더 구체적이기 때문에 더 `"적용 가능하기 좋다"` 라고 `compiler` 가 판단한 것이다.
 
-반면 `SupClass` 타입을 받는 생성자의 경우, 두 생성자 `(String & SupClass type as parameter)` 모두 `null` 매개변수를 `"동등하게 적용 가능하기 때문"` 에 모호하다는 에러를 뱉어낸다.
+반면 `SupClass` 타입을 받는 생성자의 경우, 두 생성자 `(SupClass(String arg), SupClass(SupClass obj))` 모두 `null` 매개변수를 `"동등하게 적용 가능하기 때문"` 에 모호하다는 에러를 뱉어낸다.
 
 ---
 
@@ -112,7 +112,7 @@ class SubClass extends SupClass {
     - `[3]` : `public`, `protected`, `package-private`
     - `[4]` : `Override` 할 수 없음
 
-메서드 `Overriding` 을 사용할 시, `"부모 클래스보다 가시성을 줄일 수 없다."` 는 점을 주의해야 한다.
+메서드 `Overriding` 을 사용할 시, `"부모 클래스보다 가시성 (Visibility) 을 줄일 수 없다."` 는 점을 주의해야 한다.
 이 `"가시성"` 의 순서는 `private < protected < package-private < public` 이다.
 
 때문에 `method_public` 은 `public` 하게 `Override` 할 수밖에 없고, `method_PacakgePrivate` 은 `private` 을 제외한 어떤 방식이든 `Override` 할 수 있다.

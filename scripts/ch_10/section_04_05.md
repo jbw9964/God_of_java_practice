@@ -57,7 +57,7 @@ SubClass test6 = (SubClass) sub_ref;            // No error occurs
 ```
 
 먼저 `test4` 와 `test5` 를 비교해보자. `test4` 의 경우 이전 예시에서 에러를 뱉어내는 것을 확인하였다.
-하지만 `test5` 의 경우 놀랍게도 소스코드가 컴파일 가능하고, 실행시켜야 에러를 뱉어낸다.
+하지만 `test5` 의 경우 놀랍게도 <ins>**소스코드가 컴파일 가능하고, 실행시켜야 에러를 뱉어낸다.**</ins>
 
 `test4` 와 `test5` 는 무엇이 다른가? 바로 <ins>**타입 캐스팅을 명시해 준 점**</ins> 이다.
 `Java` 에서 타입 캐스팅을 **명시적으로** 적는 것은 다음처럼 비유할 수 있다. [`[1]`](#explicit-casting-from-super-class-to-sub-class)
