@@ -1,8 +1,8 @@
 
 ### Chapter 02 : Hello God Of Java
 
-- [`4. main 메소드를 만들자`](./section_04_06.md)
-- [`6. 주석 (Comment) 처리하기`](./section_04_06.md)
+- [`4. main 메소드를 만들자`](./section_04_06.md#4-main-메소드를-만들자)
+- [`6. 주석 (Comment) 처리하기`](./section_04_06.md#6-주석-comment-처리하기)
 
 ---
 
