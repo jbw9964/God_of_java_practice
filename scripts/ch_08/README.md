@@ -1,10 +1,10 @@
 
 ### Chapter 08 : 참조 자료형에 대해서 더 자세히 알아봅시다
 
-- [`2. 기본 생성자`](./section_02_09.md)
-- [`9. static 블럭`](./section_02_09.md)
-- [`10. Pass by value, Pass by reference`](./section_10_11.md)
-- [`11. 매개 변수를 지정하는 특이한 방법`](./section_10_11.md)
+- [`2. 기본 생성자`](./section_02_09.md#2-기본-생성자)
+- [`9. static 블럭`](./section_02_09.md#9-static-블럭)
+- [`10. Pass by value, Pass by reference`](./section_10_11.md#10-pass-by-value-pass-by-reference)
+- [`11. 매개 변수를 지정하는 특이한 방법`](./section_10_11.md#11-매개-변수를-지정하는-특이한-방법)
 
 ---
 
