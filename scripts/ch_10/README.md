@@ -2,9 +2,9 @@
 ### Chapter 10 : 자바는 상속이라는 것이 있어요
 
 - [`2. 상속과 생성자`](./section_02_03.md#2-상속과-생성자)
-- [`3. 메서드 Overriding`](./section_02_03.md#2-상속과-생성자)
-- [`4. 참조 자료형의 형 변환`](./section_04_05.md)
-- [`5. Polymorphism`](./section_04_05.md)
+- [`3. 메서드 Overriding`](./section_02_03.md#3-메서드-overriding)
+- [`4. 참조 자료형의 형 변환`](./section_04_05.md#4-참조-자료형의-형-변환)
+- [`5. Polymorphism`](./section_04_05.md#5-polymorphism)
 
 
 ---
