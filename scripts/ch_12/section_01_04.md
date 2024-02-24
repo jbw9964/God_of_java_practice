@@ -26,8 +26,6 @@
 |`public int hashCode()`|객체에 대한 `hash code` 값을 리턴한다. 이 때 해쉬 코드는 `"16 진수로 제공되는 객체의 메모리 주소"` 를 말한다.|
 |`public String toString()`|객체를 문자열로 표현하는 값을 리턴한다.|
 
-이 중 `clone()`, `finalize()`, `getClass()` 메서드를 제외한 메서
-
 
 - `스레드 처리를 위한 메서드`
 
@@ -43,9 +41,7 @@
 `ns` : ($\mathbf{10^{-9}s}$)
 
 책에서 스레드에 관한 설명은 `25 장` 에서 이어간다. 
-또한 `객체 처리를 위한 메서드` 중, `clone()`, `finalize()`, `getClass()` 는 설명하지 않는다.
-
-따라서 해당 챕터에서는 `toString`, `equals`, `hashCode` 메서드에 대한 설명만 존재한다.
+또한 `객체 처리를 위한 메서드` 중, `clone()`, `finalize()`, `getClass()` 는 교재에서 설명하지 않는다. 나중에 따로 공부하거나 하자.
 
 ---
 
