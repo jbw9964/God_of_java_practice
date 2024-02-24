@@ -57,7 +57,9 @@
 
 이는 단순해 보이지만 좀 더 깊은 내용을 함축하고 있다. `C++` 과는 다르게, <ins>**`Java` 는 연산자 오버로딩 (Operator Overloading) 이 없다는 점**</ins> 이다.
 
-<details><summary>Details</summary><p>
+<details><summary> Details</summary><p>
+
+---
 
 나는 `C++` 로 객체지향 언어를 처음 배워서, 모든 객체 지향 언어에는 연산자 오버로딩이 있을 줄 알았다. 그래서 `Java` 를 시작할 때에도 당연히 있을 줄 알았는데 지금 보니 아니라고 한다. 
 
@@ -91,7 +93,7 @@ getClass().getName() + '@' + Integer.toHexString(hashCode())
 
 여기서 `"동등하다"` 의 뜻은 `"동일시 될 수 있는가"` 와 일맥 상통하며, 비교 연산 `==` 와 사뭇 다른점을 인지해야 한다.
 
-<details><summary>비교 연산자 == 와 equals 메서드의 차이</summary><p>
+<details><summary> 비교 연산자 == 와 equals 메서드의 차이</summary><p>
 
 ---
 

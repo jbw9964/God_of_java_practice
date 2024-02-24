@@ -1,10 +1,10 @@
 
 ### Chapter 12 : 모든 클래스의 부모 클래스는 Object 에요
 
-- [`2. Object 클래스에서 제공하는 메서드들의 종류는?`](./section_01_04.md)
-- [`3. Object 클래스에서 가장 많이 쓰이는 toString() 메서드`](./section_01_04.md)
-- [`4. 객체는 == 만으로 같은지 확인이 안 되므로, equals() 를 사용하죠`](./section_01_04.md)
-- [`5. 객체의 고유값을 나타내는 hashCode()`](./section_05.md)
+- [`2. Object 클래스에서 제공하는 메서드들의 종류는?`](./section_01_04.md#2-object-클래스에서-제공하는-메서드들의-종류는)
+- [`3. Object 클래스에서 가장 많이 쓰이는 toString() 메서드`](./section_01_04.md#3-object-클래스에서-가장-많이-쓰이는-tostring-메서드)
+- [`4. 객체는 == 만으로 같은지 확인이 안 되므로, equals() 를 사용하죠`](./section_01_04.md#4-객체는--만으로-같은지-확인이-안-되므로-equals-를-사용하죠)
+- [`5. 객체의 고유값을 나타내는 hashCode()`](./section_05.md#5-객체의-고유값을-나타내는-hashcode)
 
 
 ---

@@ -24,7 +24,7 @@
 
 `(이 때문인지 여러 IDE 에서는 두 메서드를 자동으로 생성해주는 기능을 제공한다 한다)`
 
-<details><summary>hashCode 와 System.identityHashCode 의 차이점</summary><p>
+<details><summary> hashCode 와 System.identityHashCode 의 차이점</summary><p>
 
 ---
 
@@ -34,7 +34,7 @@
 
 참으로 간단한 설명이다. 때문에 사실 어느 클래스가 `hashCode` 를 `Override` 하지 않았다면, `hashCode` 메서드 또한 객체의 메모리 주소를 간접적으로 보여준다 할 수 있다.
 
-또한 앞서 `[2]` 의 설명을 직접 확인해 볼 수 있는데, `Java debugger` 의 `hot code replace` 를 이용하는 것이다.
+또한 앞서 [`[2]`](#javalangsystemidentityhashcode---oracle-docs) 의 설명을 직접 확인해 볼 수 있는데, `Java debugger` 의 `hot code replace` 를 이용하는 것이다.
 
 다음과 같은 코드가 있다 하자.
 
