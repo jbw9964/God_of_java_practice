@@ -228,7 +228,7 @@ no arg cons
 
 `Java` 의 `enum` 은 `java.lang.Enum` 의 자식이다. 우리가 `enum` 을 사용할 때 `extends java.lang.Enum` 을 붙이지는 않지만 `compiler` 가 이를 자동으로 붙여준다 한다. 
 
-이제 `Enum` 이 어떻게 생겼는지 알아보자. [`[2]`](#2--class-enume-extends-enume---oracle-docs)
+이제 `Enum` 이 어떻게 생겼는지 알아보자. [`[3]`](#3--class-enume-extends-enume---oracle-docs)
 
 |`Modifier`|`Constructor`|`Description`|
 |---|---|---|
@@ -260,7 +260,7 @@ no arg cons
 
 마지막으로 `enum` 클래스에는 `API` 문서에 없는 특수한 메서드가 있는데, 바로 `values()` 라는 메서드이다. 
 
-`values()` 메서드는 미리 선언되거나 정의된 메서드가 아닌 `compiler` 에 의해 추가되는 메서드이다. [`[3]`](#3--where-is-the-documentation-for-the-values-method-of-enum---stackoverflow)
+`values()` 메서드는 미리 선언되거나 정의된 메서드가 아닌 `compiler` 에 의해 추가되는 메서드이다. [`[4]`](#4--where-is-the-documentation-for-the-values-method-of-enum---stackoverflow)
 
 `values()` 메서드는 해당 열거형에 속하는 모든 `enum` 상수의 `list` 를 반환한다.
 
@@ -290,23 +290,7 @@ Three   class SomeEnum
     - [`Enum Types`](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
         - `[2]` : Note: The constructor for an enum type must be package-private or private access. It automatically creates the constants that are defined at the beginning of the enum body. You cannot invoke an enum constructor yourself.
 
-- ##### [`[2] : Class Enum<E extends Enum<E>> - Oracle Docs`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html)
+- ##### [`[3] : Class Enum<E extends Enum<E>> - Oracle Docs`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html)
 
-- ##### [`[3] : Where is the documentation for the values() method of Enum? - StackOverflow`](https://stackoverflow.com/questions/13659217/where-is-the-documentation-for-the-values-method-of-enum)
-    - 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- ##### [`[4] : Where is the documentation for the values() method of Enum? - StackOverflow`](https://stackoverflow.com/questions/13659217/where-is-the-documentation-for-the-values-method-of-enum)
 
