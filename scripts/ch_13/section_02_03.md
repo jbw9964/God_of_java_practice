@@ -128,7 +128,7 @@ Overriden method
 
 `(덧붙여 default method 는 암묵적으로 public 하기 때문에, Override 하더라도 public 하게 만들 수 밖에 없다)`
 
-`static method` 는 라이브러리, 모듈 등의 복잡도를 더 낮출 수 있다. 메서드가 `static` 하므로, 해당 메서드에 접근하려면 ~~당연히~~ `interface` 의 타입에 그대로 접근해야 한다.
+`static method` 를 이용하면 라이브러리, 모듈 등의 복잡도를 더 낮출 수 있다. 메서드가 `static` 하므로, 해당 메서드에 접근하려면 ~~당연히~~ `interface` 의 타입에 그대로 접근해야 한다.
 
 ```java
 interface SomeInterface {
