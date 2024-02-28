@@ -66,7 +66,7 @@
 
 #### `b. 프로그램의 실행 순서를 바꾸는 예약어`
 
-해당 목록에는 `if`, `else`, `for`, `do`, `while`, `continue`, `break`,  `switch`, `case`, `default`, `try`, `catch`, `finally`, `return`, `synchronized` 가 있다.
+해당 목록에는 `if`, `else`, `for`, `do`, `while`, `continue`, `break`,  `switch`, `case`, `default`, `try`, `catch`, `finally`, `throw`, `throws` `return`, `synchronized` 가 있다.
 
 ###### `if`, `else`
 - `if`, `else` 키워드를 이용해 `if 구문` 과 `else if`, `else 구문` 을 생성할 수 있다.
@@ -88,6 +88,11 @@
 ###### `try`, `catch`, `finally`
 - 해당 키워드를 이용해 프로그램 내 `예외 처리` [`(Exception handling), [11]`](#11--exception-handling-programming---wikipedia) 를 진행할 수 있다.
 - 키워드 사용 방식은 `Python` 의 `try`, `except`, `finally` 와 동일하다.
+
+###### `throw`, `throws`
+- `Java` 에서 의도적으로 예외 `(Exception)` 을 발생시킬 때 사용되는 키워드이다. `try-catch` 구문을 이용해 예외 유형에 따른 처리를 진행할 수 있다.
+- 예외가 발생하였을 때, 발생한 메서드에서 예외 처리를 하지 않으면 호출된 메서드로, 어느 메서드에서도 처리되지 않으면 스레드로 예외가 전달된다.
+- `throw` 는 `예외 인스턴스` 를 바로 발생시키는 반면, `throws` 는 메서드 헤더 `(Header)` 부분에 같이 선언해, 호출된 메서드로 예외를 되돌려준다.
 
 ###### `return`
 - `return` 키워드는 메서드의 실행을 종료하기 위해 사용된다. 메서드의 `type` 에 맞춰 어느 값을 메서드가 호출된 부분으로 `"돌려줄"` 수 있다.
