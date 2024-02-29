@@ -43,7 +43,7 @@ End of test
 
 ### `6. 예외의 종류는 세 가지다`
 
-`Java` 에서 예외는 3 종류이다. `Error`, `Runtime Exception`, `Checked Exception` 이며, [`[1]`](#1--the-three-kinds-of-exceptions---the-java™-tutorials) 이에 대한 구현 관계를 나타내면 다음과 같다.
+`Java` 에서 예외는 3 종류이다. `Error`, `Runtime Exception`, `Checked Exception` 이며, [`[1]`](#1--the-three-kinds-of-exceptions) 이에 대한 구현 관계를 나타내면 다음과 같다.
 
 <p align="center">
     <img src="../../images/ch14/java_exception_diagram.png" width=80% height=80%>
