@@ -9,7 +9,7 @@
 
 ### `1. 자바에서 가장 많이 사용하는 String 클래스`
 
-`String` 은 ~~당연히~~ 가장 많이 사용되는 참조형 중 하나이다. 공식 문서에 따르면 `String` 은 다음과 같은 선언을 가진다. [`[1]`](#1`)
+`String` 은 ~~당연히~~ 가장 많이 사용되는 참조형 중 하나이다. 공식 문서에 따르면 `String` 은 다음과 같은 선언을 가진다. [`[1]`](#1--class-string---oracle-docs)
 
 ```java
 public final class String

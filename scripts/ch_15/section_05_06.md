@@ -70,7 +70,7 @@ System.out.println(str1 == str4);   // true
 System.out.println(str1 == str5);   // false
 ```
 
-`String Pool` 에 저장되는 대상은 크게 리터럴 문자열, `intern()` 메서드를 이용해 생성된 문자열 뿐이다. `(intern() 메서드는 추후에 설명한다)`
+`String Pool` 에 저장되는 대상은 크게 리터럴 문자열, `intern()` 메서드를 이용해 생성된 문자열 뿐이다. [`(intern() 메서드는 추후에 설명한다)`](./section_07_10.md#9-절대로-사용하면-안-되는-메서드가-하나-있어요)
 
 또한 `str3` 의 경우 `compiler` 에 의해 `"He" + "llo"` 는 `"Hello"` 로 그냥 변환된다. 따라서 `String Pool` 에는 `"Hello"` 가 저장되며, 이는 `str1`, `str2`, `str3` 와 동일하다.
 
