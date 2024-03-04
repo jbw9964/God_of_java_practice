@@ -33,9 +33,9 @@
 
 |`Method`|`Description`|
 |---|---|
-|`public String getMessage()`|현 객체에 저장된 에러 메시지를 반환한다.|
-|`public String toString()`|현 객체의 `class` 와 저장된 에러 메시지를 포함하는 `String` 을 반환한다.|
-|`public void printStackTrace()`|`에러 스트림` 에 `toString()` 메서드와 예외가 발생하기 까지의 `호출 관계` `(stack trace)` 를 출력한다.|
+|`String getMessage()`|현 객체에 저장된 에러 메시지를 반환한다.|
+|`String toString()`|현 객체의 `class` 와 저장된 에러 메시지를 포함하는 `String` 을 반환한다.|
+|`void printStackTrace()`|`에러 스트림` 에 `toString()` 메서드와 예외가 발생하기 까지의 `호출 관계` `(stack trace)` 를 출력한다.|
 
 다음 예시는 `printStackTrace` 메서드에 관한 예시이다.
 
