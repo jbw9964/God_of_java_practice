@@ -229,7 +229,7 @@ abstract method were implemented        20      false
 
 이는 다음 예시처럼 확인해 볼 수 있다.
 
-<details><summary> Define annotations & class</summary>
+<details><summary> annotation, 클래스 세부 정의</summary>
 
 ```java
 // Define annotations & class
@@ -404,5 +404,3 @@ In [class Practice.Example2  ], there are [ 1] annotations :
     
     - ##### [`Lambda Expressions, Approach 5: Specify Search Criteria Code with a Lambda Expression - Oracle Docs`](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#approach5)
         - `[9]` : A `functional interface` is any `interface` that contains only one `abstract method`. `(A functional interface may contain one or more default methods or static methods.)` Because a `functional interface` contains only one `abstract method`, you can omit the name of that method when you implement it.
-
-Reflection enables Java code to discover information about the fields, methods and constructors of loaded classes, and to use reflected fields, methods, and constructors to operate on their underlying counterparts, within security restrictions.
