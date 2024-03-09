@@ -93,7 +93,7 @@
 
 `switch-case` 는 쉽게 말해 `if-else-if` 구문을 가독성 좋게, 많이 생성해 낼 수 잇는 구문이다.
 
-사실 동일한 동작을 하는 `switch-case` 와 `if-else-if` 간에 성능 차이가 존재**했**었다. 왜냐면 `switch-case` 는 `(compiler 에 따라 다르지만)` `분기 테이블` 을 만들고, 이를 통해 최대 `O(1)` 의 성능으로 작동할 수 있다.
+사실 동일한 동작을 하는 `switch-case` 와 `if-else-if` 간에 성능 차이가 존재**했**었다. 왜냐면 `switch-case` 는 `(compiler 에 따라 다르지만)` `분기 테이블` 을 만들고, 이를 통해 최대 `O(1)` 의 성능으로 작동할 수 있다. `(Ex : Duff's device)` [`[2]`](#2--duffs-device---wikipedia)
 
 하지만 현실적으로 말하면 많은 `compiler` 의 성능이 아주 좋아져 이제는 이 둘이 차이는 거의 존재하지 않는다.
 
@@ -240,18 +240,43 @@ number1;            // onward JDK 1.5
 
 #### `[17]` : 클래스를 `final` 로 선언하는 것이 어떤 의미가 있는지 정리해 주세요.
 
+클래스에 `final` 키워드를 이용하면 해당 클래스는 더이상 어느 클래스에게 상속될 수 없게 된다.
+
+대표적인 예시로 `String` 클래스가 그러하다.
+
 ---
 
 #### `[18]` : 변수를 `static` 으로 선언하는 것이 어떤 의미가 있는지 정리해 주세요.
+
+정확히는 `Java` 에서 `local static variable` 은 허용되지 않는다. 여기서 말하는 것은 아마 클래스의 `static` 필드를 말하는 것 같다.
+
+당연히 `static` 이 붙었으므로, 해당 필드의 수명은 돌아가는 프로그램과 같다. 또한 `static` 필드가 있는 객체가 얼마나 많이 존재하든, 이들 모두 동일한 `static` 필드를 공유한다. 때문에 대개 `static` 필드는 클래스에서 절대 바뀌지 않을 것들을 `final` 키워드와 함께 사용한다.
 
 ---
 
 #### `[19]` : 메서드를 `static` 으로 선언하는 것이 어떤 의미가 있는지 정리해 주세요.
 
+`static` 메서드는 말 그대로 `static` 한 메서드이다. 일반적인 메서드는 객체를 생성하고 그 객체의 정보를 이용해 메서드를 수행한다.
+
+하지만 `static` 메서드는 객체를 생성하지 않고도 수행할 수 있는 메서드로, 객체가 생성되지 않았기 때문에 `non-static` 한 접근은 모두 허용되지 않는다. `(ex : this)`
+
+때문에 일반 메서드는 `"객체의 메서드"` 이고, `static` 메서드는 `"클래스의 메서드"` 라 칭할 수 있을 것이다.
+
 ---
 
 #### `[20]` : `try-catch-finally` 블럭은 왜 사용하고 각각의 블럭이 어떤 용도로 사용되는지 정리해 주세요.
 
+`try-catch` 구문은 `Java` 에서 예외 처리를 위한 구문이다. `Python` 의 `try-except-finally` 와 거의 동일하다.
+
+다만 `Python` 도 그러한지는 모르겠지만, `Java` 의 예외는 좀 더 구조적(?) 이다.
+
+`Java` 의 예외는 `Error`, `Runtime Exception`, `Checked Exception` 으로 나눈다.
+
+`Runtime Exception` 과 `Checked Exception` 은 모두 `java.lang.Exception` 의 자식들이고, `Error` 와 `java.lang.Exception` 는 `java.lang.Throwable` 의 자식들이다.
+
+때문에 일반적으로 예외 처리를 진행할 때, 마지막 `catch` 는 `Exception` 으로 잡는다. `Throwable` 까지 잡는 것은 `convention` 에 잘 맞지 않는다 한다.
+
+`try-catch` 구문으로 프로그램 실행 중 원하는 예외가 발생한 경우 이를 처리할 수 있다. `finally` 는 예외가 발생했든 안했든 코드를 마지막에 실행시켜준다.
 
 ---
 
@@ -259,7 +284,7 @@ number1;            // onward JDK 1.5
 
 - ##### [`[1] : Naming Conventions - Oracle Docs`](https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)
 
-
+- ##### [`[2] : Duff's device - Wikipedia`](https://en.wikipedia.org/wiki/Duff%27s_device)
 
 
 
