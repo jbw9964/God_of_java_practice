@@ -17,7 +17,7 @@
 
 ### `11. 매개 변수를 지정하는 특이한 방법`
 
-`Java` 에는 `"임의 개수의 매개 변수"` `(Arbitary Number of Arguments)` 를 넘겨주는 방법이 존재한다.
+`Java` 에는 `"임의 개수의 매개 변수"` `(Arbitary Number of Arguments)` `(또는 가변 인자, Variable Arguments)` 를 넘겨주는 방법이 존재한다.
 
 ```java
 void Arbitary_1(int first, int ... others);
