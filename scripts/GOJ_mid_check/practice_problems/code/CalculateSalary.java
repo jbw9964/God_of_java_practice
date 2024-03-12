@@ -1,6 +1,5 @@
 package scripts.GOJ_mid_check.practice_problems.code;
 
-import Practice.TestAnnotation;
 import scripts.GOJ_mid_check.practice_problems.code.Employee;
 
 @SuppressWarnings("unused")
